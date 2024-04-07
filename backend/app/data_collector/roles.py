@@ -49,7 +49,8 @@ class AllPersons:
         )
          
          self.person1.finances = FinancialInformation(
-             assets=None, 
+             tangible_assets=None, 
+             nontangible_assets=None, 
              debts=None,
              income_sources=None,
              financial_obligations=None)
@@ -69,7 +70,8 @@ class AllPersons:
         )
          
          self.person2.finances = FinancialInformation(
-             assets=None, 
+             tangible_assets=None, 
+             nontangible_assets=None,  
              debts=None,
              income_sources=None,
              financial_obligations=None)
