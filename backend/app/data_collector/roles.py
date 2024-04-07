@@ -78,63 +78,6 @@ class AllPersons:
              debts=None,
              income_sources=None,
              financial_obligations=None)
-         
+        
 
-
-@dataclass
-class DistributionAgreement:
-    asset_division: Dict[str, str]
-    debt_responsibility: Dict[str, str] 
-    legal_representation_reviewed: bool
-
-    def assign_asset(self, asset_name: str, owner_name: str):
-        self.asset_division[asset_name] = owner_name
-
-    def assign_debt_responsibility(self, debt_name: str, responsible_party: str):
-        self.debt_responsibility[debt_name] = responsible_party
-
-    def legal_representation_review(self):
-        self.legal_representation_reviewed = True
-
-
-@dataclass
-class SpousalSupport:
-    has_agreement: bool
-    amount: Optional[float] = None
-    duration: Optional[int] = None  # Duration in months
-    legal_representation_reviewed: bool
-
-    def set_spousal_support(self, amount: float, duration: int):
-        self.has_agreement = True
-        self.amount = amount
-        self.duration = duration
-
-    def legal_representation_review(self):
-        self.legal_representation_reviewed = True
-
-
-@dataclass
-class EstatePlanning:
-    separate_property: Dict[str, str]
-    existing_plans: Optional[str] = None
-    legal_representation_reviewed: bool
-
-    def designate_separate_property(self, property_name: str, owner_name: str):
-        self.separate_property[property_name] = owner_name
-    
-    def legal_representation_review(self):
-        self.legal_representation_reviewed = True
-
-
-@dataclass
-class PrenupAgreement:
-    personal_info: AllPersons
-    distribution_agreement: DistributionAgreement
-    spousal_support: SpousalSupport
-    estate_planning: EstatePlanning
-    legal_representation_reviewed: bool
-
-    
-    def legal_representation_review(self):
-        self.legal_representation_reviewed = True
 
