@@ -6,3 +6,4 @@ class SolutionParameters:
     DATA_DIR: str = field(default_factory= lambda: "data")  # NOTE: directory containing the documents.
     API_KEY_SOLAR_LLM: str = field(default="hack-with-upstage-solar-0407")
     LAYOUT_ANALYZER: str = field(default="hack-with-upstage-docai-0407")
+    GEMINI_API_KEY: str = field(default="AIzaSyB4ii0wZjmOHDeMbe26hfFyVsYgyc9l3YU")
