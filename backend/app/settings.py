@@ -3,11 +3,10 @@ from typing import Dict
 from llama_index.core.settings import Settings
 from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.core.constants import DEFAULT_TEMPERATURE
 
 
 def llm_config_from_env() -> Dict:
-    from llama_index.core.constants import DEFAULT_TEMPERATURE
-
     model = os.getenv("MODEL")
     temperature = os.getenv("LLM_TEMPERATURE", DEFAULT_TEMPERATURE)
     max_tokens = os.getenv("LLM_MAX_TOKENS")
