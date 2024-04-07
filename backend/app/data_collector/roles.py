@@ -19,6 +19,7 @@ class PersonalInformation:
     email_addresses: Dict[str, str]
     marriage_date: str
     marriage_location: str
+    religion_affiliation: Optional[str] = None
     legal_representation_reviewed: bool = field(default=False)
 
 
@@ -45,7 +46,8 @@ class AllPersons:
             phone_numbers={"home": None, "cell": None},
             email_addresses={"home": None},
             marriage_date=None,
-            marriage_location=None
+            marriage_location=None,
+            religion_affiliation=None
         )
          
          self.person1.finances = FinancialInformation(
@@ -66,7 +68,8 @@ class AllPersons:
             phone_numbers={"home": None, "cell": None},
             email_addresses={"home": None},
             marriage_date=None,
-            marriage_location=None
+            marriage_location=None,
+            religion_affiliation=None
         )
          
          self.person2.finances = FinancialInformation(
