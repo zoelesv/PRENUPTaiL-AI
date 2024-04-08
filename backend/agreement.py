@@ -100,8 +100,8 @@ A. Acknowledgement of Full Disclosure and Understanding
 
 ------------------------------------------------------------------------
 
-Generate text for the first section""").text
+Generate text for section I. Be sure to include the section title.""").text
 
-    for _ in range(15):
-        response += chat.send_message('Generate text for the next section').text
+    for section in ['II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI']:
+        response += '\n\n' + chat.send_message('Generate text for section %s. Be sure to include the title of the section.' % section, safety_settings={'HARASSMENT':'block_none'}).text
     return response
