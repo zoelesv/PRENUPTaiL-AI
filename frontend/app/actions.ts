@@ -151,8 +151,9 @@ export async function refreshHistory(path: string) {
 export async function getMissingKeys() {
   // const keysRequired = ['OPENAI_API_KEY']
   // TODO - not reading openai key, since we're using upstage.ai's solar model
-  const keysRequired = []
-  return keysRequired
-    .map(key => (process.env[key] ? '' : key))
-    .filter(key => key !== '')
+  // const keysRequired = []
+  // return keysRequired
+  //   .map(key => (process.env[key] ? '' : key))
+  //   .filter(key => key !== '')
+  return []
 }
