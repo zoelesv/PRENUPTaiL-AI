@@ -60,6 +60,8 @@ def home():
             if grounded:
                 return jsonify(f'''"Here is the answer {answer}"''')
         return jsonify(f'''"Here is the answer {answer}"''')
+    else:
+        return jsonify("Hello, World!")
 
 @app.route('/chat', methods=['GET', 'POST'])
 def rag():
