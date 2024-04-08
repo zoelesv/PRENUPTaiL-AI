@@ -8,6 +8,8 @@
   ],
   "plugins": ["tailwindcss"],
   "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
     "tailwindcss/no-custom-classname": "off",
     "tailwindcss/classnames-order": "off"
   },
